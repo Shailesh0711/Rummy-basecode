@@ -1,0 +1,41 @@
+{
+  "name": "deal_rummy_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "start": "rimraf dist && tsc && node ./dist/rummy.js",
+    "dev": "nodemon ./src/rummy.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@socket.io/redis-adapter": "^8.0.0",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.1",
+    "bull": "^4.10.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graceful-fs": "^4.2.10",
+    "ioredis": "^5.2.4",
+    "joi": "^17.7.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "mongodb": "^4.13.0",
+    "redis": "^4.6.5",
+    "redlock": "^4.2.0",
+    "socket.io": "^4.2.0",
+    "underscore": "^1.13.6",
+    "url": "^0.11.1",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}

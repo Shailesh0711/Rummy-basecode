@@ -1,0 +1,37 @@
+export interface playingTableIf {
+    _id: string;
+    gameType: string;
+    dealType: number;
+    gamePoolType: number;
+    totalRounds: number;
+    totalPlayers: number;
+    maximumSeat: number;
+    minPlayerForPlay: number;
+    currentRound: number;
+    lobbyId: string;
+    gameId: string;
+    maximumPoints: number;
+    winningScores: number[];
+    firstDrop: number;
+    middleDrop: number;
+    lastDrop: number;
+    gameStartTimer: number;
+    userTurnTimer: number;
+    secondaryTimer: number;
+    declareTimer: number;
+    splitTimer: number;
+    bootAmount: number;
+    potValue: number;
+    winPrice: number;
+    winner: Array<any>;
+    isFTUE: boolean;
+    bot: boolean;
+    mode: string;
+    rake: number;
+    createdAt: Date;
+    updatedAt: Date;
+    startGameTime : Date;
+    moneyMode: string;
+    rummyType: string;
+    isAutoSplitEnabled : boolean;
+}
