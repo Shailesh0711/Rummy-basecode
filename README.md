@@ -1,11 +1,11 @@
-# Rummy SkillWinz
+# Rummy Backend Basecode
 
 Rummy is a classic card game that is widely played around the world. The game's objective is to form sets or runs of cards before your opponents. It's a game that combines skill, strategy, and a bit of luck.
 
 ## Table of Contents
 
 
-- [Rummy-SkillWinz](#Rummy-SkillWinz)
+- [Rummy-Basecode](#Rummy-Basecode)
 - [Introduction](#introduction)
 - [Features](#features)
 - [HowToPlay](#HowToPlay)
@@ -47,7 +47,7 @@ Next Round: The game continues with subsequent rounds until a predetermined scor
 
 ```bash
 # branch : production
-https://github.com/maxxmarker/rummybackend/tree/production
+https://github.com/Shailesh0711/Rummy-basecode.git
 ```
 
 ## Installation
@@ -57,7 +57,7 @@ Provide step-by-step instructions on how to install and set up your project.
 1) Clone code
 
 ```bash
-git clone https://github.com/maxxmarker/rummybackend/tree/production
+git clone https://github.com/Shailesh0711/Rummy-basecode.git
 ```
 2) Start cmd
 
