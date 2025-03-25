@@ -45,8 +45,9 @@ export async function insertNewPlayer(
     const gameType = GAME_TYPE.SOLO
     const queueKey = `${gameType}:${gameId}:${lobbyId}`
     const { GAME_START_TIMER, TOTAL_GAME_START_TIMER, WAITING_FOR_PLAYER } = config();
-    let tableLocks = await getLock().acquire([`locks:${lobbyId}`], 2000);
+    // let tableLocks = await getLock().acquire([`locks:${lobbyId}`], 2000);
 
+    // console.log("🚀 ~ tableLocks:", tableLocks)
     try {
         let createOrJoinTable: boolean | undefined = true;
 
@@ -232,10 +233,10 @@ export async function insertNewPlayer(
 
 
             if (!socket.connected) {
-                if (tableLocks) {
-                    await getLock().release(tableLocks);
-                    tableLocks = null;
-                }
+                // if (tableLocks) {
+                //     await getLock().release(tableLocks);
+                //     tableLocks = null;
+                // }
 
                 let seatPlayerCount: number = NUMERICAL.ZERO;
                 for await (const seat of Object.keys(roundTableData.seats)) {
@@ -729,7 +730,7 @@ export async function insertNewPlayer(
             });
         }
     } finally {
-        await getLock().release(tableLocks);
+        // await getLock().release(tableLocks);
         logger.info("-=-=-=-=>> insertNewPlayer :: lock relese ::")
     }
 }

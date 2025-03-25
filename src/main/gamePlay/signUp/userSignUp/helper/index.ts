@@ -29,12 +29,12 @@ export async function userProfileUpdate(userDetail: userIf, socketId: string): P
         }
 
         //balance set in user profile
-        const balance = userOwnProfile.bonus + userOwnProfile.winCash + userOwnProfile.cash
+        const balance = userOwnProfile.bonus + userOwnProfile.winCash + userOwnProfile?.cash
 
 
         userDetail.location.latitude = latitude;
         userDetail.location.longitude = longitude;
-        userDetail.balance = Number(balance);
+        userDetail.balance =  50000;
 
         logger.info("updateUserQuery ::: >>", userDetail)
         await setUser(userDetail.userId, userDetail);

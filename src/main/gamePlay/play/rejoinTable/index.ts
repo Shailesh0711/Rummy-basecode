@@ -41,7 +41,7 @@ async function rejoinTable(
         WAITING_FOR_PLAYER,
         REJOINT_GAME_POPUP_TIMER
     } = config();
-    let rejoinLock = await getLock().acquire([`locks:${userId}`], 2000);
+    // let rejoinLock = await getLock().acquire([`locks:${userId}`], 2000);
     try {
         let userData = await getUser(userId);
         logger.info("------>> rejoinTable :: userData :: ", userData);
@@ -518,7 +518,7 @@ async function rejoinTable(
         //     });
         // }
     } finally {
-        await getLock().release(rejoinLock);
+        // await getLock().release(rejoinLock);
     }
 }
 

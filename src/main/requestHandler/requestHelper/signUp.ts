@@ -20,15 +20,15 @@ async function signUpHandler(
   logger.info("=================>> signUpHandler <<====================");
   try {
     // // for check server maintanece or not
-    let checkMaintanenceData = await checkMaintanence(
-      socket.authToken,
-      socket.id,
-      signUpData.userId
-    );
-    logger.info("checkMaintanenceData :::", checkMaintanenceData);
-    if (checkMaintanenceData && checkMaintanenceData.isMaintenance) {
-      throw new Errors.maintanenceError("Server under the maintenance!");
-    }
+    // let checkMaintanenceData = await checkMaintanence(
+    //   socket.authToken,
+    //   socket.id,
+    //   signUpData.userId
+    // );
+    // logger.info("checkMaintanenceData :::", checkMaintanenceData);
+    // if (checkMaintanenceData && checkMaintanenceData.isMaintenance) {
+    //   throw new Errors.maintanenceError("Server under the maintenance!");
+    // }
 
     // for user profile verification client api
     let isValidUserData = await verifyUserProfile(

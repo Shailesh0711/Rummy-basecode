@@ -8,7 +8,7 @@ import lock from "./main/lock";
   (async () => {
     try {
       const configData = config.default();
-      logger.info("--->> config :: ", configData);
+      // logger.info("--->> config :: ", configData);
 
       const { SERVER_TYPE, HTTP_SERVER_PORT } = configData;
       const promise = await Promise.all([

@@ -14,13 +14,11 @@ async function connectionCB(client: any) {
     try {
         logger.info(MESSAGES.SOCKET.INTERNAL.NEW_CONNECTION, client.id);
 
-        const token = client.handshake.auth.token;
-        const userId = client.handshake.auth.userId; // remove
+        const token = client.handshake.headers.auth
+        const userId = client.handshake.headers.userId; // remove
         logger.info('connectionCB token : ', token);
         logger.info('connectionCB userId : ', userId);
         client.authToken = token;
-
-        // console.log("socket :::" ,client)
 
         let getOnlinePlayerCount = await getOnliPlayerCount(REDIS.PREFIX.ONLINEPLAYER);
         logger.info("socket connection :: getOnlinePlayerCount :>>", getOnlinePlayerCount);

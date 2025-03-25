@@ -75,7 +75,7 @@ export const insertPlayerGamePlayData = async (
 
 export const insertPlayerInTable = async (userData: userIf, tableId: string | null, queueKey: string, previoustableId: string[]): Promise<number> => {
     logger.info("---------->> insertPlayerInTable <<-------------");
-    const TableLock = await getLock().acquire([`locks:${tableId}`], 2000);
+    // const TableLock = await getLock().acquire([`locks:${tableId}`], 2000);
     try {
 
         let tableConfig = await getTableData(tableId as string);
@@ -218,6 +218,6 @@ export const insertPlayerInTable = async (userData: userIf, tableId: string | nu
         );
         throw error;
     } finally {
-        await getLock().release(TableLock);
+        // await getLock().release(TableLock);
     }
 };
